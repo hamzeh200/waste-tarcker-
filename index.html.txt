@@ -581,15 +581,15 @@
 
         let categoryChart, trendChart;
 
-        // Generate QR Code targeting the page URL or fallback URL
+        // Generate QR Code targeting your specific GitHub Pages link
         function generateQRCode() {
             const qrContainer = document.getElementById("qrcode");
             qrContainer.innerHTML = ""; // Clear existing QR Code
             
-            // Automatically uses current URL, or defaults to fallback if opened as local file
+            // Reads current web location, fallback explicitly set to your github site
             const currentURL = (window.location.href && !window.location.href.startsWith('file://')) 
                 ? window.location.href 
-                : "https://example.com"; 
+                : "https://hamzeh200.github.io/waste-tarcker-/"; 
 
             new QRCode(qrContainer, {
                 text: currentURL,
